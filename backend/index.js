@@ -205,7 +205,7 @@ app.post("/forgot-password", async (req, resp) => {
     await user.save();
 
     // Send reset link to the user via email
-    const resetUrl = `http://localhost:3000/reset-password/${resetToken}`;
+    const resetUrl = `https://my-test-app-lake.vercel.app/${resetToken}`;
     const message = `You requested a password reset. Please visit the following link to reset your password: ${resetUrl}`;
 
     try {
