@@ -38,7 +38,7 @@ function Messagebox() {
 
   const fetchMessages = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:4500/message-request`, {
+      const response = await fetch(`https://my-test-app-api.onrender.com/message-request`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -124,7 +124,7 @@ function Messagebox() {
 
     try {
       const response = await fetch(
-        `http://localhost:4500/message-box/${userDetails._id}/${messageId}`,
+        `https://my-test-app-api.onrender.com/message-box/${userDetails._id}/${messageId}`,
         {
           method: "DELETE",
           headers: {
@@ -157,7 +157,7 @@ function Messagebox() {
   const fetchImages = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4500/images/${userDetails._id}`,{
+        `https://my-test-app-api.onrender.com/images/${userDetails._id}`,{
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
