@@ -30,7 +30,7 @@ function Profile() {
   // Fetch images based on email
   const fetchImages = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:4500/images/${userId}`, {
+      const response = await fetch(`https://my-test-app-api.onrender.comimages/${userId}`, {
         method: "GET",
         headers: {
           authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
@@ -53,7 +53,7 @@ function Profile() {
   const checkFollowStatus = async (currentUserId, targetUserId) => {
     try {
       const response = await fetch(
-        `http://localhost:4500/follow-status/${currentUserId}/${targetUserId}`,
+        `https://my-test-app-api.onrender.com/follow-status/${currentUserId}/${targetUserId}`,
         {
           method: "GET",
           headers: {
@@ -74,7 +74,7 @@ function Profile() {
   const sendFollowRequest = async () => {
     try {
       console.log(user._id, userDetails._id);
-      const response = await fetch("http://localhost:4500/follow", {
+      const response = await fetch("https://my-test-app-api.onrender.com/follow", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,7 +98,7 @@ function Profile() {
 
   const messagerequest = async () => {
     try {
-      const response = await fetch(`http://localhost:4500/message-request`, {
+      const response = await fetch(`https://my-test-app-api.onrender.com/message-request`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -126,7 +126,7 @@ function Profile() {
 
     try {
      
-      const response = await fetch("http://localhost:4500/unfollow", {
+      const response = await fetch("https://my-test-app-api.onrender.com/unfollow", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -150,7 +150,7 @@ function Profile() {
   const fetchFollowStats = async (userId) => {
     try {
       const response = await fetch(
-        `http://localhost:4500/getotherfollows/${userId}`,
+        `https://my-test-app-api.onrender.com/getotherfollows/${userId}`,
         {
           method: "GET",
           headers: {
@@ -176,7 +176,7 @@ function Profile() {
 
   const getmutualusers = async (data) => {
     try {
-      const response = await fetch("http://localhost:4500/check-mutual", {
+      const response = await fetch("https://my-test-app-api.onrender.com/check-mutual", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -212,7 +212,7 @@ function Profile() {
     const fetchUserDetails = async () => {
       try {
         
-        const response = await fetch(`http://localhost:4500/user/${userId}`, {
+        const response = await fetch(`https://my-test-app-api.onrender.com/user/${userId}`, {
           method: "GET",
           headers: {
             authorization: `bearer ${JSON.parse(
@@ -253,7 +253,7 @@ function Profile() {
 
     try {
       const result = await fetch(
-        `http://localhost:4500/getfollowers/${getuser}`,
+        `https://my-test-app-api.onrender.com/getfollowers/${getuser}`,
         {
           headers: {
             authorization: `bearer ${JSON.parse(
@@ -275,7 +275,7 @@ function Profile() {
     setpopup(true);
     try {
       const result = await fetch(
-        `http://localhost:4500/getfollowers/${getuser}`,
+        `https://my-test-app-api.onrender.com/getfollowers/${getuser}`,
         {
           headers: {
             authorization: `bearer ${JSON.parse(
