@@ -42,7 +42,7 @@ function Chat() {
 
   const loadMessages = async (productId) => {
     try {
-      const result = await fetch(`http://localhost:4500/message/${productId}`, {
+      const result = await fetch(`https://my-test-app-api.onrender.com/message/${productId}`, {
         headers: {
           method: "GET",
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ function Chat() {
 
       setMessages((prevMessages) => [...prevMessages, newMessage]);
 
-      const result = await fetch(`http://localhost:4500/message/${productId}`, {
+      const result = await fetch(`https://my-test-app-api.onrender.com/message/${productId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -119,7 +119,7 @@ function Chat() {
   const deleteMessage = async (messageId) => {
     try {
       const result = await fetch(
-        `http://localhost:4500/message/${productId}/${messageId}`,
+        `https://my-test-app-api.onrender.com/message/${productId}/${messageId}`,
         {
           method: "DELETE",
           headers: {
@@ -146,7 +146,7 @@ function Chat() {
 
     try {
       const result = await fetch(
-        `http://localhost:4500/message/${productId}/${editingMessageId}`,
+        `https://my-test-app-api.onrender.com/message/${productId}/${editingMessageId}`,
         {
           method: "PATCH",
           headers: {
