@@ -53,7 +53,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // Correct URL for your frontend
+    origin: "https://my-test-app-lake.vercel.app", // Correct URL for your frontend
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"], // Allow all common HTTP methods
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   })
