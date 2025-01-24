@@ -64,7 +64,7 @@ function Notifications() {
   const acceptFollowRequest = async (notificationId, followRequestId) => {
     try {
       const response = await fetch(
-        "http://localhost:4500/notifications/accept-follow",
+        "https://my-test-app-api.onrender.com/notifications/accept-follow",
         {
           method: "POST",
           headers: {
