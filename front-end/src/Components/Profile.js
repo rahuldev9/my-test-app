@@ -27,7 +27,7 @@ function Profile({ toggleColor }) {
   const fetchposts = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4500/getposts/${user._id}`,
+        `https://my-test-app-api.onrender.com/getposts/${user._id}`,
         {
           method: "GET",
           headers: {
@@ -62,7 +62,7 @@ function Profile({ toggleColor }) {
   const fetchFollowStats = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4500/getfollow/${user._id}`,
+        `https://my-test-app-api.onrender.com/getfollow/${user._id}`,
         {
           method: "GET",
           headers: {
@@ -117,7 +117,7 @@ function Profile({ toggleColor }) {
     setLoading(true);
     const userid = user._id;
     try {
-      const response = await fetch("http://localhost:4500/upload", {
+      const response = await fetch("https://my-test-app-api.onrender.com/upload", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -147,7 +147,7 @@ function Profile({ toggleColor }) {
   // Fetch images (single image)
   const fetchImages = async () => {
     try {
-      const response = await fetch(`http://localhost:4500/images/${user._id}`, {
+      const response = await fetch(`https://my-test-app-api.onrender.com/images/${user._id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -169,7 +169,7 @@ function Profile({ toggleColor }) {
     setpopup(true);
     try {
       const result = await fetch(
-        `http://localhost:4500/getfollowers/${getuser}`,
+        `https://my-test-app-api.onrender.com/getfollowers/${getuser}`,
         {
           headers: {
             authorization: `bearer ${JSON.parse(
@@ -191,7 +191,7 @@ function Profile({ toggleColor }) {
     setpopup(true);
     try {
       const result = await fetch(
-        `http://localhost:4500/getfollowers/${getuser}`,
+        `https://my-test-app-api.onrender.com/getfollowers/${getuser}`,
         {
           headers: {
             authorization: `bearer ${JSON.parse(
@@ -216,7 +216,7 @@ function Profile({ toggleColor }) {
 
   const getmutualusers = async (data) => {
     try {
-      const response = await fetch("http://localhost:4500/check-mutual", {
+      const response = await fetch("https://my-test-app-api.onrender.com/check-mutual", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
