@@ -13,7 +13,7 @@ function ResetPassword() {
     }
 
     try {
-      let result = await fetch(`http://localhost:4500/reset-password/${token}`, {
+      let result = await fetch(`https://my-test-app-api.onrender.com/reset-password/${token}`, {
         method: 'POST',
         body: JSON.stringify({ password }), // Send the new password in the body
         headers: {
