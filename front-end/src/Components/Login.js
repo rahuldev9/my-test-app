@@ -9,7 +9,6 @@ function Login() {
   const [loginFailed, setLoginFailed] = useState(false); // New state variable
   const [loading, setLoading] = useState(false); // State for loading
   const navigate = useNavigate();
-  const apiUrl = process.env.REACT_APP_API_URL;
 
 
 
@@ -22,7 +21,7 @@ function Login() {
     setLoading(true); // Start loading before the API request
 
     try {
-      let result = await fetch(`${apiUrl}/login`, {
+      let result = await fetch("https://my-test-app-api.onrender.com/login", {
         method: "POST",
         body: JSON.stringify({ email, password }),
         headers: { "Content-Type": "application/json" },
