@@ -37,7 +37,7 @@ function AddProduct() {
     setLoading(true); // Start loading
 
     try {
-      const result = await fetch('http://localhost:4500/add-product', {
+      const result = await fetch('https://my-test-app-api.onrender.com/add-product', {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {
