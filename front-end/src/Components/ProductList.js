@@ -17,7 +17,7 @@ function ProductList() {
   const fetchImages = async (userid) => {
     try {
       const response = await fetch(
-        `http://localhost:4500/images/${userid}`,{
+        `https://my-test-app-api.onrender.com/images/${userid}`,{
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -39,7 +39,7 @@ function ProductList() {
   const getProducts = async () => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
     
-    let result = await fetch(`http://localhost:4500/products/${userid}`, {
+    let result = await fetch(`https://my-test-app-api.onrender.com/products/${userid}`, {
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       },
@@ -55,7 +55,7 @@ function ProductList() {
   };
 
   const deleteProduct = async (id) => {
-    let result = await fetch(`http://localhost:4500/product/${id}`, {
+    let result = await fetch(`https://my-test-app-api.onrender.com/product/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
@@ -92,7 +92,7 @@ function ProductList() {
   const getuser = async (like) => {
   
     try {
-      const response = await fetch(`http://localhost:4500/search-user/${like}`);
+      const response = await fetch(`https://my-test-app-api.onrender.com/search-user/${like}`);
       if (!response.ok) {
         const { error } = await response.json();
         throw new Error(error || "Something went wrong.");
