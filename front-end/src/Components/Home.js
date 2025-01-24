@@ -43,7 +43,7 @@ function Home() {
       const userId = JSON.parse(localStorage.getItem("user"))._id; // Get logged-in user ID
       const username = JSON.parse(localStorage.getItem("user")).name; // Get logged-in username
 
-      const result = await fetch(`http://localhost:4500/like-product/${productId}`, {
+      const result = await fetch(`https://my-test-app-lake.vercel.app/home/like-product/${productId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
