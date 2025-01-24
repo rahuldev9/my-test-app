@@ -77,7 +77,7 @@ function Messagebox() {
       setMessages((prevMessages) => [...prevMessages, newMessage]);
 
       const result = await fetch(
-        `http://localhost:4500/message-box/${userDetails._id}`,
+        `https://my-test-app-api.onrender.com/message-box/${userDetails._id}`,
         {
           method: "PUT",
           headers: {
