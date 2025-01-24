@@ -42,7 +42,7 @@ function Searchuser() {
       const userId = JSON.parse(localStorage.getItem("user"))._id; // Get logged-in user ID
       console.log(productId);
       const result = await fetch(
-        `http://localhost:4500/like-post/${productId}`,
+        `https://my-test-app-api.onrender.com/like-post/${productId}`,
         {
           method: "PUT",
           headers: {
@@ -77,7 +77,7 @@ function Searchuser() {
   const fetchprofileimages=async(username)=>{
     try {
       const response = await fetch(
-        `http://localhost:4500/search-profile/${username}`
+        `https://my-test-app-api.onrender.com/search-profile/${username}`
       );
       if (!response.ok) {
         const { error } = await response.json();
@@ -92,7 +92,7 @@ function Searchuser() {
   }
   const fetchAllPosts = async () => {
     try {
-      const response = await fetch("http://localhost:4500/getposts", {
+      const response = await fetch("https://my-test-app-api.onrender.com/getposts", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -123,7 +123,7 @@ function Searchuser() {
 
   const getProducts = async () => {
     try {
-      const result = await fetch("http://localhost:4500/usernames", {
+      const result = await fetch("https://my-test-app-api.onrender.com/usernames", {
         headers: {
           authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
         },
@@ -160,7 +160,7 @@ function Searchuser() {
     }
 
     try {
-      const result = await fetch(`http://localhost:4500/searchuser/${key}`, {
+      const result = await fetch(`https://my-test-app-api.onrender.com/searchuser/${key}`, {
         headers: {
           authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
         },
@@ -186,7 +186,7 @@ function Searchuser() {
   const getuser = async (username) => {
     try {
       const response = await fetch(
-        `http://localhost:4500/search-user/${username}`
+        `https://my-test-app-api.onrender.com/search-user/${username}`
       );
       if (!response.ok) {
         const { error } = await response.json();
@@ -216,7 +216,7 @@ function Searchuser() {
     const username = user.name
 
     try {
-      const response = await fetch(`http://localhost:4500/addcomment/${postid}`, {
+      const response = await fetch(`https://my-test-app-api.onrender.com/addcomment/${postid}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
