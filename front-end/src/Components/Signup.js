@@ -14,7 +14,6 @@ function Signup() {
   const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate();
   
-  const apiUrl = process.env.REACT_APP_API_URL;
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -42,7 +41,7 @@ function Signup() {
 
     setLoading(true); // Start loading
 
-    let result = await fetch(`${apiUrl}/register`, {
+    let result = await fetch("https://my-test-app-api.onrender.com/register", {
       method: "post",
       body: JSON.stringify({ name, email, password }),
       headers: {
