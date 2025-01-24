@@ -19,7 +19,7 @@ function PersonalChat() {
     const getProducts = async () => {
       try {
         
-        const result = await fetch(`http://localhost:4500/myfollowers/${user._id}`, {
+        const result = await fetch(`https://my-test-app-api.onrender.com/myfollowers/${user._id}`, {
           headers: {
             authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
           },
@@ -50,7 +50,7 @@ function PersonalChat() {
       }
   
       try {
-        const result = await fetch(`http://localhost:4500/personalchat/${user._id}/${key}`, {
+        const result = await fetch(`https://my-test-app-api.onrender.com/personalchat/${user._id}/${key}`, {
           headers: {
             authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
           },
@@ -65,7 +65,7 @@ function PersonalChat() {
     };
     const fetchUserDetails = async (userId) => {
         try {
-          const response = await fetch(`http://localhost:4500/user/${userId}`, {
+          const response = await fetch(`https://my-test-app-api.onrender.com/user/${userId}`, {
             method: "GET",
             headers: {
               authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
