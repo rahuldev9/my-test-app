@@ -19,7 +19,7 @@ function Addpost() {
   const fetchImages = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4500/getposts/${user._id}`,
+        `https://my-test-app-api.onrender.com/getposts/${user._id}`,
         {
           method: "GET",
           headers: {
@@ -60,7 +60,7 @@ function Addpost() {
     const username = user.name
 
     try {
-      const response = await fetch(`http://localhost:4500/post/${userid}`, {
+      const response = await fetch(`https://my-test-app-api.onrender.com/post/${userid}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
