@@ -18,7 +18,7 @@ function UpdateProduct() {
   const getProductDetails = async () => {
     setLoading(true); // Start loading
     try {
-      let result = await fetch(`http://localhost:4500/product/${params.id}`, {
+      let result = await fetch(`https://my-test-app-api.onrender.com/product/${params.id}`, {
         method:'GET',
         headers: {
           authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
@@ -48,7 +48,7 @@ function UpdateProduct() {
     formData.append("Caption",Caption);
     setLoading(true); // Start loading
     try {
-      let result = await fetch(`http://localhost:4500/product/${params.id}`, {
+      let result = await fetch(`https://my-test-app-api.onrender.com/product/${params.id}`, {
         method: "PUT",
         body: formData,
         headers: {
