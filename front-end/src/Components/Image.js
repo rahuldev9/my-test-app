@@ -24,7 +24,7 @@ function Image() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:4500/upload', {
+            const response = await fetch('https://my-test-app-api.onrender.com/upload', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ function Image() {
     const fetchImages = async () => {
 
         try {
-            const response = await fetch(`http://localhost:4500/images?email=${user.email}`);
+            const response = await fetch(`https://my-test-app-api.onrender.com/images?email=${user.email}`);
             if (response.ok) {
                 const data = await response.json();
                 setUploadedImages(data);
