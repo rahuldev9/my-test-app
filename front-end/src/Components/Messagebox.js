@@ -26,7 +26,7 @@ function Messagebox() {
     }
     const interval = setInterval(() => {
       fetchMessages(userDetails);
-    }, 1000);
+    }, 1);
     return () => clearInterval(interval);
   }, [userDetails]);
 
