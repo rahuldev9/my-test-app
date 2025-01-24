@@ -7,7 +7,7 @@ function Notifications() {
   const fetchNotifications = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4500/notifications/${user._id}`,
+        `https://my-test-app-api.onrender.com/notifications/${user._id}`,
         {
           headers: {
             authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}`,
