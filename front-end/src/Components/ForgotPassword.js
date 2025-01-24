@@ -9,7 +9,7 @@ function ForgotPassword() {
     const handleForgotPassword = async () => {
         setLoading(true); // Start loading
 
-        const result = await fetch('http://localhost:4500/forgot-password', {
+        const result = await fetch('https://my-test-app-api.onrender.com/forgot-password', {
             method: 'POST',
             body: JSON.stringify({ email }),
             headers: { 'Content-Type': 'application/json' },
