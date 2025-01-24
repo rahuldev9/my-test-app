@@ -30,7 +30,7 @@ function Profile() {
   // Fetch images based on email
   const fetchImages = async (userId) => {
     try {
-      const response = await fetch(`https://my-test-app-api.onrender.comimages/${userId}`, {
+      const response = await fetch(`https://my-test-app-api.onrender.com/images/${userId}`, {
         method: "GET",
         headers: {
           authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
